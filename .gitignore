@@ -1,5 +1,4 @@
-*/node_modules
-.env
-*/logs
-*/core/.env
+node_modules
+logs
+core/.env
 assignment.txt
