@@ -1,0 +1,5 @@
+*/node_modules
+.env
+*/logs
+*/core/.env
+assignment.txt
