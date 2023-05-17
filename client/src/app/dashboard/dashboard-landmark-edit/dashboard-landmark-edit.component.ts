@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectorRef } from '@angular/core';
 import { RequestsService } from 'src/app/requests.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,11 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 export class DashboardLandmarkEditComponent {
 	@Input() currentLandmark:any;
 	loading:boolean = false;
-	constructor(private _requests: RequestsService, private route: ActivatedRoute) {}
+	saved: boolean = false;
+	constructor(private _requests: RequestsService, private route: ActivatedRoute, private cdr: ChangeDetectorRef) {}
 	storeNewValue(changes:object){
 		this._requests.editLandmark(changes).subscribe(
 			(data: any) => {
-				console.log(data);
+				if(data.status === 'SUCCESS'){
+					this.saved = true;
+					setTimeout(() => {
+						this.saved = false;
+					}, 1500)
+				}
 			},
 			(e: any) => {
 				console.log(e);
@@ -22,10 +28,7 @@ export class DashboardLandmarkEditComponent {
 	}
 	ngOnInit() {
 		this.route.params.subscribe((params) => {
-			const parameterValue = params['id'];
-			// Handle the changed URL parameter here
-			console.log('URL parameter changed:', parameterValue);
-			// Trigger any necessary actions or update the component's view
+			/* Kind of a hacky way to re-render but works for now */
 			this.loading = true;
 			setTimeout(() => {
 				this.loading = false;

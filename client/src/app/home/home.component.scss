@@ -96,5 +96,29 @@
 				left: 0;
 			}
 		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+			
+			.home__posts-postImage{
+				width: 100%;
+			}
+			.home__posts-postDescription{
+				width: 100%;
+			}
+		}
+		@media (max-width: 500px) {
+			.home__posts-title{
+				font-size: 25px !important;
+			}
+		}
+	}
+	@media (max-width: 500px) {
+		.container-fluid {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.home__search-contain{
+			padding: 0px;
+		}
 	}
 }

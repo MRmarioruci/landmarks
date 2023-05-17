@@ -1,6 +1,6 @@
 <div class="d-flex home__nav">
 	<div (click)="goToHome()" class="home__nav-logo">
-		<img src="../../assets/images/logo.png" width="300" />
+		<img src="../../assets/images/logo.png" />
 	</div>
 	<div>
 		<button *ngIf="username" class="btn btn-warning float-end" (click)="logout()">
@@ -9,7 +9,7 @@
 			</span>
 			Logout
 		</button>
-		<button class="btn btn-primary float-end" (click)="login()">
+		<button class="btn float-end" (click)="login()">
 			<span class="material-icons align-middle" *ngIf="!username">
 				login
 			</span>

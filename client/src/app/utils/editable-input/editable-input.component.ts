@@ -18,7 +18,7 @@ export class EditableInputComponent {
 	}
 	onBlur(){
 		/* No need to update if it's the same one */
-		if(this.value === this.initialValue) return;
+		if(this.value == this.initialValue) return;
 		this.storeNewValue.emit({
 			objectId: this.id,
 			fieldName: this.key,

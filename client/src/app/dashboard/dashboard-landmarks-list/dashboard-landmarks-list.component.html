@@ -1,4 +1,19 @@
-<div  *ngFor="let landmark of landmarks">
+<div class="dashboard__container-listMobile">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+			aria-haspopup="true" aria-expanded="false">
+			<span class="material-icons">
+				menu
+			</span>
+		</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" (click)="goTo(landmark.objectId)" *ngFor="let landmark of landmarks">
+				{{landmark.title}}
+			</a>
+		</div>
+	</div>
+</div>
+<div  *ngFor="let landmark of landmarks" class="dashboard__container-listItems">
 	<div [ngClass]="{'dashboard__container-listItem': true, 'dashboard__container-listItemActive': currentLandmarkId === landmark.objectId} " (click)="goTo(landmark.objectId)">
 		{{landmark.title}}
 	</div>

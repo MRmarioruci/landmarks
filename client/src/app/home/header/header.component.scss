@@ -4,7 +4,16 @@
 	justify-content: space-between;
 
 	.home__nav-logo{
+		img{
+			width: 300px;
+		}
 		
+
+		@media (max-width: 768px) {
+			img{
+				width: 180px;
+			}
+		}
 	}
 	.logo__text {
 		position: absolute;

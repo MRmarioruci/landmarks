@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { RequestsService } from '../../requests.service';
 import { Router } from '@angular/router';
+import 'bootstrap/dist/js/bootstrap.js'; // Import Bootstrap JavaScript
 
 @Component({
 	selector: 'app-dashboard-landmarks-list',
