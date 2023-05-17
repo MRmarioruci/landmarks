@@ -1,5 +1,6 @@
-node_modules
-logs
-core/.env
+server/node_modules
+server/logs
+server/core/.env
 assignment.txt
-uploads/*
+server/uploads/*
+client/node_modules
