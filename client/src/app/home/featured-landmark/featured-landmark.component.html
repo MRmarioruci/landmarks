@@ -1,0 +1,12 @@
+<div class="card p-3 home__posts-post home__posts-main" (click)="goTo(landmark.objectId)">
+	<img [src]="landmark.photo_thumb" class="img-fluid">
+	<div class="home__posts-mainTop">LATEST</div>
+	<div class="home__posts-title">{{landmark.title}}</div>
+	<div class="home__posts-description">
+		{{landmark.short_info}}
+	</div>
+	<div class="read__more">
+		<span class="material-icons align-middle">arrow_right_alt</span>
+		Read more...
+	</div>
+</div>

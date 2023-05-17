@@ -1,0 +1,39 @@
+<div class="d-flex home__nav">
+	<div (click)="goToHome()" class="home__nav-logo">
+		<img src="../../assets/images/logo.png" width="300" />
+	</div>
+	<div>
+		<button *ngIf="username" class="btn btn-warning float-end" (click)="logout()">
+			<span class="material-icons align-middle">
+				logout
+			</span>
+			Logout
+		</button>
+		<button class="btn btn-primary float-end" (click)="login()">
+			<span class="material-icons align-middle" *ngIf="!username">
+				login
+			</span>
+			<span *ngIf="!username">Dashboard</span>
+			<span *ngIf="username">Hey, {{username}}</span>
+		</button>
+	</div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="loginModal">Modal Title</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				Modal Body
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>

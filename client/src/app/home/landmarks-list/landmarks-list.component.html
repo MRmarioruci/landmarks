@@ -1,0 +1,16 @@
+<div *ngFor="let landmark of landmarks; let i=index">
+	<div class="card p-3 home__posts-post d-flex flex-row" *ngIf="hasSearchTerm ? true : i > 0" (click)="goTo(landmark.objectId)">
+		<div class="col-md-3 home__posts-postImage" style="background: url({{landmark.photo_thumb}});background-size: cover;background-position: center;background-repeat: no-repeat;">
+		</div>
+		<div class="col-9 p-2">
+			<div class="home__posts-postTitle">{{landmark.title}}</div>
+			<div class="home__posts-postDescription">
+				{{landmark.short_info}}
+			</div>
+			<div class="read__more">
+				<span class="material-icons align-middle">arrow_right_alt</span>
+				Read more...
+			</div>
+		</div>
+	</div>
+</div>

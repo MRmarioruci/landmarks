@@ -1,0 +1,27 @@
+<div class="container d-flex align-items-center justify-content-center vh-100">
+	<div class="login-form">
+		<h2>Login</h2>
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" formControlName="username" class="form-control" [class.is-invalid]="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+				<div class="invalid-feedback"
+					*ngIf="loginForm.get('username')?.errors && loginForm.get('username')?.touched">
+					Please enter a username.
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" formControlName="password" class="form-control" [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+				<div class="invalid-feedback"
+					*ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+					Please enter a password.
+				</div>
+			</div>
+			<div class="text-danger" *ngIf="error">
+				An error occured. Please review your credentials.
+			</div>
+			<button type="submit" class="btn btn-primary submit">Login</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="home">
+	<div class="container-fluid">
+		<div class="container">
+			<app-header></app-header>
+			<div class="row home__search">
+				<h1>Search your favorite landmarks!</h1>
+				<div class="text-muted">Just start typing and the most relevant landmarks will apperar.</div>
+				<div class="mt-20 d-flex flex-row justify-content-center">
+					<input type="text" placeholder="Type here..." class="form-control" [(ngModel)]="searchTerm" />
+					<span *ngIf="searchTerm" (click)="clearSearchTerm()" class="material-icons align-middle text-danger home__search-clear">clear</span>
+					<button class="btn btn-primary btn-search" (click)="getLandmarks()">
+						<span class="material-icons align-middle">arrow_right_alt</span>
+					</button>
+				</div>
+			</div>
+			<div class="row home__posts" *ngIf="loading">
+				<span class="loader"></span>
+			</div>
+			<div class="row home__posts" *ngIf="!loading">
+				<div class="col-xl-5" *ngIf="!queryHasSearchTerm">
+					<app-featured-landmark [landmark]="landmarks[0]" [goTo]="goTo"></app-featured-landmark>
+				</div>
+				<div [class]="queryHasSearchTerm ? 'col-12 text-center' : 'col-xl-7'" >
+					<h3 *ngIf="queryHasSearchTerm && landmarks.length === 0 ">No results for the given search term</h3>
+					<app-landmarks-list [landmarks]="landmarks" [hasSearchTerm]="queryHasSearchTerm" [goTo]="goTo"></app-landmarks-list>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<div  *ngFor="let landmark of landmarks">
+	<div [ngClass]="{'dashboard__container-listItem': true, 'dashboard__container-listItemActive': currentLandmarkId === landmark.objectId} " (click)="goTo(landmark.objectId)">
+		{{landmark.title}}
+	</div>
+</div>
+<div *ngIf="loading" class="row">
+	<span class="loader"></span>
+</div>

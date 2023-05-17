@@ -1,0 +1,6 @@
+<div *ngIf="type === 'text' ">
+	<input type="text" [value]="value" class="form-control" [(ngModel)]="value" (blur)="onBlur()" placeholder="Type here...">
+</div>
+<div *ngIf="type === 'textarea' ">
+	<textarea type="text" [value]="value" class="form-control" [(ngModel)]="value" (blur)="onBlur()" placeholder="Type here..."></textarea>
+</div>

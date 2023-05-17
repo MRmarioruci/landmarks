@@ -1,0 +1,39 @@
+<div class="landmark">
+	<div class="row">
+		<app-header></app-header>
+	</div>
+	<div class="row home__posts" *ngIf="loading">
+		<span class="loader"></span>
+	</div>
+	<div class="row landmark__container" *ngIf="!loading">
+		<div class="landmark__header" style="background: url({{landmark?.photo}});background-position: center;background-size: cover" (click)="openImageInNewTab(landmark.photo)">
+			<div class="btn btn-xl" (click)="goBack()">
+				<span class="material-icons">
+					arrow_back_ios
+				</span>
+			</div>
+			<div class="ml-3 landmark__header-title">{{landmark?.title}}</div>
+		</div>
+		<div class="mt-5">
+			<div>
+				{{landmark?.short_info}}
+				<div class="mt-3">
+					{{landmark?.description}}
+				</div>
+			</div>
+		</div>
+		<div class="mt-5">
+			Learn more about the landmark <a [href]="landmark?.url" target="_blank">here</a>
+		</div>
+		<div>
+			<google-map
+				height="500px"
+  				width="100%"
+				[center]="{
+					lat: landmark.location[1],
+					lng: landmark.location[0],
+				}">
+			</google-map>
+		</div>
+	</div>
+</div>

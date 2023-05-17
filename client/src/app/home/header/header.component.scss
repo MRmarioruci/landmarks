@@ -1,0 +1,22 @@
+.home__nav {
+	padding: 10px;
+	position: relative;
+	justify-content: space-between;
+
+	.home__nav-logo{
+		
+	}
+	.logo__text {
+		position: absolute;
+		margin-left: -0px;
+		border: 1px solid #000;
+		margin-top: 50px;
+		background: rgb(221, 242, 199);
+		backdrop-filter: blur(50px);
+		padding: 2px 5px;
+		border-radius: 5px;
+		display: inline-block;
+		width: auto;
+		font-weight: bold;
+	}
+}

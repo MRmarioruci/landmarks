@@ -1,0 +1,17 @@
+<div class="image__upload-placeholder">
+	<input type="file" (change)="onFileSelected($event)" accept=".jpg, .png, .gif">
+	<div *ngIf="preview" class="text-center">
+		<img [src]="preview" class="img-fluid">
+		<div class="mt-2">
+			Click to change - Maximum size 5mb
+		</div>
+	</div>
+	<div *ngIf="errorMessage" class="text-danger">
+		{{errorMessage}}
+	</div>
+	<div class="progress" *ngIf="showProgressBar" style="width: 100%;">
+		<div class="progress-bar" role="progressbar" [style.width.%]="uploadProgress">
+			{{ uploadProgress }}%
+		</div>
+	</div>
+</div>

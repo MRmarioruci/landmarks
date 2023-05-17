@@ -1,0 +1,29 @@
+<div *ngIf="currentLandmark && !loading">
+	<h3>Edit <b>{{currentLandmark?.title}}</b> Details</h3>
+	<div class="text-muted">
+		* Changes are saved automatically
+	</div>
+	<hr>
+	<div class="m-2">
+		<div class="form-group mt-3">
+			<label>Title</label>
+			<app-editable-input [id]="currentLandmark.objectId" [initialValue]="currentLandmark.title" [key]="'title'" (storeNewValue)="storeNewValue($event)" ></app-editable-input>
+		</div>
+		<div class="form-group mt-3">
+			<label>Short info</label>
+			<app-editable-input [id]="currentLandmark.objectId" [type]="'textarea'" [initialValue]="currentLandmark.short_info" [key]="'short_info'" (storeNewValue)="storeNewValue($event)"></app-editable-input>
+		</div>
+		<div class="form-group mt-3">
+			<label>Description</label>
+			<app-editable-input [id]="currentLandmark.objectId" [type]="'textarea'" [initialValue]="currentLandmark.description" [key]="'description'" (storeNewValue)="storeNewValue($event)"></app-editable-input>
+		</div>
+		<div class="form-group mt-3">
+			<label>Url</label>
+			<app-editable-input [id]="currentLandmark.objectId" [initialValue]="currentLandmark.url" [key]="'url'" (storeNewValue)="storeNewValue($event)"></app-editable-input>
+		</div>
+		<div class="form-group mt-3">
+			<label>Image</label>
+			<app-image-upload [id]="currentLandmark.objectId" [initialValue]="currentLandmark.photo" [key]="'photo'" (storeNewValue)="storeNewValue($event)"></app-image-upload>
+		</div>
+	</div>
+</div>

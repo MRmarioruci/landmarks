@@ -1,0 +1,19 @@
+<div class="row" *ngIf="loading">
+	<span class="loader"></span>
+</div>
+<div *ngIf="username && !loading" class="dashboard">
+	<div class="container">
+		<app-header [username]="username"></app-header>
+		<div class="dashboard__container">
+			<div class="dashboard__container-list">
+				<app-dashboard-landmarks-list [currentLandmarkId]="currentLandmarkId" (setCurrentLandmark)="setCurrentLandmark($event)"></app-dashboard-landmarks-list>
+			</div>
+			<div class="dashboard__container-item">
+				<app-dashboard-landmark-edit [currentLandmark]="currentLandmark"></app-dashboard-landmark-edit>
+			</div>
+		</div>
+	</div>
+</div>
+<div *ngIf="!username && !loading">
+	<app-login (setUsername)="setUsername($event)"></app-login>
+</div>

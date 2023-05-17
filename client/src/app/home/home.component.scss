@@ -1,0 +1,100 @@
+::ng-deep.home{
+	width: 100%;
+	height: 100%;
+	background: url("../../assets/images/blob-scene-haikei.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow-y: auto;
+	
+	.home__search{
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 20px;
+		position: relative;
+
+		.home__search-clear{
+			margin-left: -30px;
+			margin-top: 13px;
+			margin-right: 7px;
+			cursor: pointer;
+		}
+		
+		input{
+			flex-basis: 600px;
+			height: 50px;
+			border-radius: 25px;
+			border: 1px solid #000
+		}
+		.btn-search{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+	}
+	.home__posts {
+		margin-top: 100px;
+		
+		.home__posts-post{
+			backdrop-filter: blur(50px);
+			background-color: transparent;
+			border: none;
+			box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+			position: relative;
+			cursor: pointer;
+			webkit-transition: background-color 200ms linear;
+			-ms-transition: background-color 200ms linear;
+			transition: background-color 200ms linear;
+			
+			.home__posts-postImage{
+				height: 200px !important;
+				border-radius: 10px;
+			}
+			.home__posts-postTitle {
+				font-weight: bold;
+				font-size: 20px;
+			}
+
+			.read__more {
+				visibility: hidden;
+				width: 100%;
+				text-align: right;
+			}
+			&:hover{
+				background-color: rgba(221, 242, 199, 0.2);
+
+				.read__more{
+					visibility: visible;
+				}
+			}
+		}
+		.home__posts-main{
+			img{
+				max-height: 500px;
+				width: auto;
+				margin: auto;
+			}
+			.home__posts-title{
+				font-weight: bold;
+				font-size: 40px;
+			}
+			.home__posts-mainTop{
+				padding: 2px 20px;
+				display: block;
+				background-color: #000;
+				color: #fff;
+				border-radius: 4px;
+				width: 120px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+}

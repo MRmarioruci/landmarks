@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root{
+	--background: #fff;
+	--background-rgb: 255 255 255;
+	
+	--textColor: #000D25;
+	--textColor-rgb: 91 91 91;
+	/* --primary: #242021;
+	--primary-rgb: 36 32 33;
+	
+	--secondary: #F6F7F9;
+	--secondary-rgb: 245 245 245;
+	
+	--light: #fff;
+	--light-rgb: 255 255 255;
+	
+	--success: #00BFA6;
+	--success-rgb: 0 191 166;
+	
+	--danger: #ff6584;
+	--danger-rgb: 245 0 87;
+	
+	--warning: #DA8B47;
+	--warning-rgb: 222 146 70; */
+}
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Didact Gothic', sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: var(--background);
+	color: var(--textColor) !important;
+	width: 100%;
+	overflow: hidden;
+	padding: 0rem;
+	margin: 0rem;
+}
+
+span {
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
+.btn{
+	border-radius: 0px;
+}
+.btn-primary{
+	background: #000;
+	border-color: #000;
+	
+	&:disabled{
+		opacity: 0.5;
+		background-color: #000D25;
+		border-color: #000D25;
+	}
+}
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 3px solid #000;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+	margin: auto;
+}
+
+.loader::after {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-bottom-color: #DBBD92;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
