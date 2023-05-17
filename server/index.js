@@ -22,7 +22,6 @@ const parseServer = new ParseServer({
 	appId: process.env.APP_ID,
 	masterKey: process.env.MASTER_KEY,
 	serverURL: process.env.SERVER_URL,
-	//allowPublicAccess: true,
 });
 Parse.User.enableUnsafeCurrentUser();
 parseServer.start();
@@ -34,7 +33,6 @@ const dashboard = new ParseDashboard({
 			masterKey: process.env.MASTER_KEY,
 			appName: process.env.APP_NAME,
 			sessionLength: 86400, // 24 hours (adjust as needed)
-			sessionTokenKey: 'your-session-token-key', // Replace with your own session token key
 		},
 	],
 	users: [
@@ -63,5 +61,4 @@ const httpServer = require('http').createServer(app);
 httpServer.listen(port, function () {
 	console.log(`Server running on port ${port}`);
 });
-// This will enable the Live Query real-time server
 ParseServer.createLiveQueryServer(httpServer);

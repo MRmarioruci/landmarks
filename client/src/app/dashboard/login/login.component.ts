@@ -36,8 +36,8 @@ export class LoginComponent {
 			(e: any) => {
 				this.loginForm.reset();
 				this.error = true;
-				console.log(e);
 				this.loading = false;
+				console.log(e);
 			}
 		)
 	}

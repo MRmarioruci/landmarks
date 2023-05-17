@@ -56,7 +56,7 @@ const getLandmarks = (req, res) => {
 	}
 	query.ascending('order');
 	query.find().then((results) => {
-		/* Just convert the result to a assoc array for better use */
+		/* Just convert the result to an assoc array for better use */
 		const data = results.reduce((acc, obj) => {
 			acc[obj.id] = obj.toJSON();
 			return acc;
@@ -110,7 +110,6 @@ const imageUpload = async (req, res) => {
 	// No need to generate a random name as parse server already does that.
 	/* const randomFilename = `${uuidv4()}-${file.originalname}`; */
 
-	// Generate thumbnail using sharp
 	const thumbnailBuffer = await sharp(file.path)
 		.resize(400, 200)
 		.toBuffer();
