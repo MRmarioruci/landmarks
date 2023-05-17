@@ -10,12 +10,12 @@ Clone this repo.
   <div>Navigate to the server directory on your local installation</div>
   <div>Run <b>npm install</b></div>
   <div>Place the <b>.env</b> file in the server/core directory. *Note, make sure it's .env not the env.txt file.</div>
-  <div>Run <b>$ node index.js</b> or <b>$ npm start</b> to start the server/div>
+  <div>Run <b>$ node index.js</b> or <b>$ npm start</b> to start the server</div>
 
 - Client
   <div>Navigate to the client directory on your local installation</div>
   <div>Run <b>npm install</b></div>
-  <div>Run <b>$ ng serve</b> to start the client/div>
+  <div>Run <b>$ ng serve</b> to start the client</div>
   <div>Navigate to http://localhost:4200</div>
     
 *Notes
