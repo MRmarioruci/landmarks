@@ -1,7 +1,8 @@
-# Dubai Landmarks Assignment
+# Dubai Landmarks
 This is a small project using Angular, Nodejs, Parse Server and Mongodb.
 - Known technologies: Nodejs, Mongodb
 - New technologies learnt for the project: Angular, Parse Server.
+- Objective was to learn Angular
 
 # Setup
 Clone this repo.
