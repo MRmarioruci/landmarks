@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { RequestsService } from './requests.service';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/header/header.component';
@@ -38,7 +37,7 @@ import { ImageUploadComponent } from './utils/image-upload/image-upload.componen
 		GoogleMapsModule,
 		ReactiveFormsModule
 	],
-	providers: [RequestsService],
+	providers: [],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

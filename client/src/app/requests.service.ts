@@ -9,6 +9,10 @@ import { catchError } from 'rxjs/operators';
 export class RequestsService {
 	constructor(private http: HttpClient) { }
 	api="http://localhost:5000";
+	errorHandler(error:object):any{
+		console.error('An error occurred:', error);
+		return throwError('Something bad happened; please try again later.');
+	}
 	getLandmarks(searchTerm: string, landmarkId: string): Observable<any> {
 		const url = `${this.api}/getLandmarks?searchTerm=${searchTerm}&landmarkId=${landmarkId}`;
 		return this.http.get(url)
@@ -24,8 +28,7 @@ export class RequestsService {
 		return this.http.get(url)
 		.pipe(
 			catchError((error: HttpErrorResponse) => {
-				console.error('An error occurred:', error);
-				return throwError('Something bad happened; please try again later.');
+				return this.errorHandler(error);
 			})
 		);
 	}
