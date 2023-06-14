@@ -20,9 +20,14 @@ Clone this repo.
   <div>Navigate to http://localhost:4200</div>
     
 *Notes
-- The Burj Khalifa image might not be properly displayed due to testing and loss of the original one. Just update with another one.
 - Use of Angular might architecture might not be optimal due to lack of experience.
 - The map will not be displayed properly as it requires a paid API KEY.
+
+# Screenshots
+![alt text](https://raw.githubusercontent.com/MRmarioruci/landmarks/main/client/src/assets/images/home.png)
+![alt text](https://raw.githubusercontent.com/MRmarioruci/landmarks/main/client/src/assets/images/landmark.png)
+![alt text](https://raw.githubusercontent.com/MRmarioruci/landmarks/main/client/src/assets/images/login.png)
+![alt text](https://raw.githubusercontent.com/MRmarioruci/landmarks/main/client/src/assets/images/landmarkedit.png)
  
 
 
